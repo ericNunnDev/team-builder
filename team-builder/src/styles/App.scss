@@ -1,39 +1,69 @@
 @import 'vars';
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   background-image: url('../images/team.jpg');
   background-position: center;
   background-size: cover;
   color: #fff;
+  font-family: 'Cabin', sans-serif;
   height: 100vh;
   padding: 25px;
   text-align: center;
 
   form {
-    border: 2px inset #999;
+    background: rgba($color: #FFF, $alpha: 0.6);
+    border: 3px ridge #999;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     margin: 0 auto;
     padding: 25px;
-    width: 350px;
+    width: 375px;
 
-    input {
-      margin: 10px auto;
-      padding: 5px;
+    label {
+      color: #000;
+      font-weight: 600;
+      margin-bottom: -6px;
+      text-align: left;
       width: 200px;
+      
+      input {
+        border: 1px solid #999;
+        border-radius: 5px;
+        box-sizing: border-box;  
+        margin: 10px auto;
+        padding: 10px 20px;
+        width: 200px;
+      }
     }
 
     button {
-      background-color: antiquewhite;
+      border-radius: 5px;
       cursor: pointer;
+      margin-top: 5px;
       padding: 5px;
+      width: 125px;
       @include easeOut;
 
       &:hover {
-        transform: scale(1.1);
+        background-color: #555;
+        color: #FFF;
         @include easeOut;
       }
     }
   }
+}
+
+.friend-card {
+  background: rgba($color: #FFF, $alpha: 0.6);
+  border: 3px ridge #999;
+  color: #000;
+  margin: 15px auto;
+  padding: 10px;
+  width: 300px;
 }
