@@ -16,7 +16,7 @@ html, body {
   text-align: center;
 
   form {
-    background: rgba($color: #FFF, $alpha: 0.6);
+    background: rgba($color: #FFF, $alpha: 0.7);
     border: 3px ridge #999;
     display: flex;
     flex-flow: column nowrap;
@@ -39,6 +39,10 @@ html, body {
         margin: 10px auto;
         padding: 10px 20px;
         width: 200px;
+
+        &:focus {
+          background-color: #EEE;
+        }
       }
     }
 
@@ -54,6 +58,11 @@ html, body {
         background-color: #555;
         color: #FFF;
         @include easeOut;
+
+        &:active {
+          transform: scale(0.9);
+          @include easeOut;
+        }
       }
     }
   }
@@ -70,12 +79,35 @@ html, body {
   .delete-btn {
     cursor: pointer;
     margin-right: 20em;
+    width: 29px;
     @include easeOut;
 
     &:hover {
       background-color: #555;
       color: #FFF;
       @include easeOut;
+
+      &:active {
+        transform: scale(0.9);
+        @include easeOut;
+      }
+    }
+  }
+
+  .edit-btn {
+    cursor: pointer;
+    margin-right: 20em;
+    @include easeOut;
+
+    &:hover {
+      background-color: #555;
+      color: #FFF;
+      @include easeOut;
+
+      &:active {
+        transform: scale(0.9);
+        @include easeOut;
+      }
     }
   }
 }

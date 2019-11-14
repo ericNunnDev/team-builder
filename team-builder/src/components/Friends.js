@@ -6,6 +6,7 @@ const Friends = props => {
             {props.friends.map(friend => (
                 <div className='friend' key={friend.id}>
                 <button className='delete-btn' onClick={() => props.deleteFriend(friend.id)}>X</button>
+                <button className='edit-btn'><i class='fas fa-pencil-alt'></i></button>
                 <h2>{friend.name}</h2>
                 <p>{friend.email}</p>
                 <p>{friend.role}</p>
