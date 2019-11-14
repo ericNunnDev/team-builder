@@ -9,7 +9,7 @@ function App() {
       id: 1,
       name: 'Eric Nunn',
       email: 'e.nunn1009@gmail.com',
-      role: 'I am me.'
+      role: 'A complex combination of molecules working together to make a conscious, carbon-based lifeform that my ego calls "I".'
     }
   ]);
 
@@ -23,11 +23,21 @@ function App() {
     setFriends([...friends, newFriend]);
   };
 
+  const deleteFriend = friendId => {
+    const friendList = [...friends];
+    for(let i = 0; i < friendList.length; i++) {
+      if (friendList[i].id === friendId) {
+        friendList.pop(i);
+      }
+    }
+    setFriends(friendList);
+  }
+
   return (
     <div className='App'>
       <h1>Team Builder</h1>
       <FriendForm addNewFriend={addNewFriend} />
-      <Friends friends={friends} />
+      <Friends deleteFriend={deleteFriend} friends={friends} />
     </div>
   );
 }
